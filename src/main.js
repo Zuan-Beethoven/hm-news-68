@@ -5,14 +5,15 @@ import router from './router'
 import './style/bess.less'
 import './style/iconfont.css'
 // 全局导入'vant'
-// import Vant from 'vant'
-// import 'vant/lib/index.css'
-// Vue.use(Vant)
-// 自动按需加载
-import { Button } from 'vant'
-// import Button from 'vant/lib/button'
-// import 'vant/lib/button/style'
-Vue.use(Button)
+import Vant from 'vant'
+import 'vant/lib/index.css'
+// 导入rem库
+import 'amfe-flexible'
+// 全局注册组件
+import HmHeader from './components/HmHeader.vue'
+Vue.component('hm-header', HmHeader)
+
+Vue.use(Vant)
 Vue.config.productionTip = false
 
 new Vue({
