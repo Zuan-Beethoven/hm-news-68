@@ -1,6 +1,7 @@
 <template>
 <div class="hm-header">
   <div class="back" @click="back">
+    <!-- 箭头组件 -->
     <span class="iconfont iconjiantou2"></span>
   </div>
   <div class="title"><slot></slot></div>

@@ -1,5 +1,6 @@
 <template>
   <div class="hm-logo">
+    <!-- logo组件 -->
     <span class="iconfont iconnew"></span>
   </div>
 </template>
