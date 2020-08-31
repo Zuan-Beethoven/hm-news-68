@@ -14,6 +14,7 @@ import axios from 'axios'
 import HmHeader from './components/HmHeader.vue'
 import HmLogo from './components/HmLogo.vue'
 import HmNavItem from './components/HmNavtem.vue'
+// import UserEdit from './components/UserEdit.vue'
 import moment from 'moment'
 
 // 把axios挂到vue原型上
