@@ -1,6 +1,6 @@
 <template>
   <div>
-  <hm-header>登录</hm-header>
+  <hm-header>登录一下</hm-header>
   <hm-logo></hm-logo>
   <van-form @submit="login">
   <van-field
@@ -42,13 +42,16 @@ export default {
         username: this.username,
         password: this.password
       })
-      // console.log(res.data)
-      const { statusCode, message } = res.data
+
+      const { statusCode, message, data } = res.data
       if (statusCode === 200) {
         // 在组件中必须  this.$toast才能使用
         this.$toast.success(message)
         // 保存token
         // 跳转到个人中心
+        // 保存token
+        localStorage.setItem('token', data.token)
+        localStorage.setItem('userId', data.user.id)
         // this.$router.push('/user')
         this.$router.push({
           path: '/user'
