@@ -16,6 +16,7 @@ import HmLogo from './components/HmLogo.vue'
 import HmNavItem from './components/HmNavtem.vue'
 // import UserEdit from './components/UserEdit.vue'
 import moment from 'moment'
+// import { from } from 'core-js/fn/array'
 
 // 把axios挂到vue原型上
 Vue.prototype.$axios = axios
