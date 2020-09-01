@@ -21,11 +21,11 @@
 
 </div>
 <!-- 导航条 -->
-<hm-navitem to="/follow">
+<hm-navitem to="/my-follow">
   <template>我的关注</template>
   <template #content>关注内容</template>
 </hm-navitem>
-<hm-navitem>
+<hm-navitem to="/my-comment">
   <template>我的跟帖</template>
   <template #content>跟帖回复</template>
 </hm-navitem>
@@ -33,7 +33,7 @@
   <template>我的收藏</template>
   <template #content>文章/视频</template>
 </hm-navitem>
-<hm-navitem to="user-edit">设置</hm-navitem>
+<hm-navitem to="/user-edit">设置</hm-navitem>
 <div style="margin: 15px;">
   <van-button type="danger" block @click="logout">退出</van-button>
 </div>

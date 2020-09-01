@@ -16,12 +16,15 @@ import HmLogo from './components/HmLogo.vue'
 import HmNavItem from './components/HmNavtem.vue'
 // import UserEdit from './components/UserEdit.vue'
 import moment from 'moment'
+
 // import { from } from 'core-js/fn/array'
 
 // 把axios挂到vue原型上
 Vue.prototype.$axios = axios
 // 给axios配置默认baseURL  基本地址
-axios.defaults.baseURL = 'http://localhost:3000'
+const URL = 'http://localhost:3000'
+axios.defaults.baseURL = URL
+Vue.prototype.$base = URL
 // 配置拦截器
 // 请求拦截器
 axios.interceptors.request.use(function(config) {
@@ -48,8 +51,8 @@ axios.interceptors.response.use(function(response) {
   return response
 })
 
-Vue.filter('time', input => {
-  return moment(input).format('YYYY-MM-DD')
+Vue.filter('time', (input, str = 'YYYY-MM-DD') => {
+  return moment(input).format(str)
 })
 Vue.component('hm-header', HmHeader)
 Vue.component('hm-logo', HmLogo)
