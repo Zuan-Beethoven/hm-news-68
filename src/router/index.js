@@ -6,6 +6,7 @@ import User from '../views/User.vue'
 import UserEdit from '../views/UserEdit.vue'
 import MyFollow from '../views/MyFollow.vue'
 import MyComment from '../views/MyComment.vue'
+import MyStar from '../views/MyStar.vue'
 // import { userSetter } from 'core-js/fn/symbol'
 
 Vue.use(VueRouter)
@@ -21,7 +22,8 @@ const routes = [
   { path: '/user', component: User, name: 'user' },
   { path: '/user-edit', component: UserEdit, name: 'user-edit' },
   { path: '/my-follow', component: MyFollow, name: 'my-follow' },
-  { path: '/my-comment', component: MyComment, name: 'my-comment' }
+  { path: '/my-comment', component: MyComment, name: 'my-comment' },
+  { path: '/my-star', component: MyStar, name: 'my-star' }
 ]
 const router = new VueRouter({
   routes
@@ -42,7 +44,13 @@ router.beforeEach(function(to, form, next) {
   //   next()
   // }
   const token = localStorage.getItem('token')
-  const authUrls = ['/user', '/user-edit', '/my-follow', '/my-comment']
+  const authUrls = [
+    '/user',
+    '/user-edit',
+    '/my-follow',
+    '/my-comment',
+    '/my-star'
+  ]
   if (!authUrls.includes(to.path) || token) {
     next()
   } else {

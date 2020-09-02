@@ -50,6 +50,13 @@ axios.interceptors.response.use(function(response) {
   }
   return response
 })
+Vue.prototype.$url = function(url) {
+  if (url.startsWith('http')) {
+    return url
+  } else {
+    return URL + url
+  }
+}
 
 Vue.filter('time', (input, str = 'YYYY-MM-DD') => {
   return moment(input).format(str)
