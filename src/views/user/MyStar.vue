@@ -61,8 +61,8 @@ export default {
      font-size: 14px;
      span:first-child{
         margin-right: 12px;
-     }
-   }
+    }
+}
  }
  .img{
      img{

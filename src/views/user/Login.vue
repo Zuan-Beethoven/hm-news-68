@@ -1,6 +1,6 @@
 <template>
   <div>
-  <hm-header>登录一下</hm-header>
+  <hm-header>登录</hm-header>
   <hm-logo></hm-logo>
   <van-form @submit="login">
   <van-field
@@ -16,6 +16,7 @@
     name="密码"
     label="密码"
     placeholder="请输入密码"
+    autocomplete
    :rules="rules.password"
   />
   <div style="margin: 16px;">
