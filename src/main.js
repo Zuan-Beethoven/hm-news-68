@@ -15,7 +15,15 @@ import './utils/filters'
 // 全局导入vant
 import './utils/vant'
 
+// 去除没必要警告
 Vue.config.productionTip = false
+// 创建一个bus
+const bus = new Vue()
+// 挂载原型上
+Vue.prototype.$bus = bus
+// bus.$on('reply', function() {
+
+// })
 
 window.vm = new Vue({
   router,
