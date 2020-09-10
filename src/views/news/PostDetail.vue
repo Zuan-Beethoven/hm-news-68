@@ -48,7 +48,7 @@
       <div class="search">
         <input type="text" placeholder="回帖" @focus="onFocus">
       </div>
-        <span class="iconfont iconpinglun-"><i>20</i></span>
+        <span class="iconfont iconpinglun-"><i>{{commentList.length}}</i></span>
         <span class="iconfont iconshoucang" :class="{now: post.has_star}" @click="star"></span>
         <span class="iconfont iconfenxiang"></span>
     </div>
@@ -71,6 +71,7 @@ export default {
   },
   created() {
     this.getInfo()
+    // console.log(this.getCommentList())
     // 获取文章评论列表
     this.getCommentList()
     // 给bus注册自定义事件
